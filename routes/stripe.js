@@ -90,7 +90,6 @@ const editOrder = async (customer, data, res) => {
       .file("images/Capstone.png")
       .download();
     const logo = await sharp(logoBuffer[0]).resize(200, 200).toBuffer();
-    // const logo = await sharp("/images/Logo.png").resize(200, 200).toBuffer();
 
     // Add logo to QR code
     const qrCodeWithLogoBuffer = await sharp(qrCodeBuffer)
@@ -129,8 +128,6 @@ const editOrder = async (customer, data, res) => {
       auth: {
         user: process.env.SMTP_MAIL,
         pass: process.env.SMTP_PASSWORD,
-        // user: "ngocgiaondc@gmail.com",
-        // pass: "glxaafptihsjpyol",
       },
     });
 
