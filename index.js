@@ -25,9 +25,14 @@ app.use(
 
 app.use(express.json());
 app.use(cors());
-app.use(cors({
-  origin: 'https://capstone-project-transtation.vercel.app/'
-}));
+// app.use(cors({
+//   origin: 'https://capstone-project-transtation.vercel.app/'
+// }));
+app.use(
+  cors({
+    origin: 'http://localhost:5000', // <-- location of the react app were connecting to
+  })
+);
 app.use("/api/stripe", stripe);
 // app.use("/api/test", test);
 
