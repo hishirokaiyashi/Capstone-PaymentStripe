@@ -147,6 +147,7 @@ const editOrder = async (customer, data, res) => {
              <p>Thank you for your purchase. We hope to see you again soon!</p>`,
     };
 
+    
     transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
         console.log(error);
