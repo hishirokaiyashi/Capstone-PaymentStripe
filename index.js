@@ -25,7 +25,9 @@ app.use(
 
 app.use(express.json());
 app.use(cors());
-
+app.use(cors({
+  origin: 'https://capstone-project-transtation.vercel.app/'
+}));
 app.use("/api/stripe", stripe);
 // app.use("/api/test", test);
 
