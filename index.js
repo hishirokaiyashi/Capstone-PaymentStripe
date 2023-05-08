@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/api/stripe", stripe);
-app.use("/api/test", test);
+// app.use("/api/test", test);
 
 app.get("/", (req, res) => {
   res.send("Welcome to Capstone checkout APIs...");
