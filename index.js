@@ -5,7 +5,7 @@ const cors = require("cors");
 // const login = require("./routes/login");
 // const orders = require("./routes/orders");
 const stripe = require("./routes/stripe");
-const test = require("./routes/test");
+// const test = require("./routes/test");
 // const productsRoute = require("./routes/products");
 
 // const products = require("./products");
