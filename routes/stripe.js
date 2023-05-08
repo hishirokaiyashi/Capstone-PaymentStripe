@@ -147,7 +147,7 @@ const editOrder = async (customer, data, res) => {
              <p>Thank you for your purchase. We hope to see you again soon!</p>`,
     };
 
-    
+    /// thêm test cors nè
     transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
         console.log(error);
@@ -276,7 +276,7 @@ router.post(
     }
 
     console.log("Tình trạng của checkout hiện tại: ", eventType);
-
+    console.log( "Check test cors")
     // Handle the checkout.session.completed event
     if (eventType === "checkout.session.completed") {
       stripe.customers
