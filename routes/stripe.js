@@ -169,6 +169,7 @@ const editOrder = async (customer, data, res) => {
   }
 };
 
+// Delete order function
 const deleteOrder = async (customer, data, res) => {
   try {
     const order = JSON.parse(customer.metadata.order)[0];
@@ -276,14 +277,14 @@ router.post(
     }
 
     console.log("Tình trạng của checkout hiện tại: ", eventType);
-    console.log( "Check test cors")
+    console.log("Check test cors");
     // Handle the checkout.session.completed event
     if (eventType === "checkout.session.completed") {
       stripe.customers
         .retrieve(data.customer)
         .then(async (customer) => {
           try {
-            // Create order
+            // Edit order
             editOrder(customer, data, res);
           } catch (err) {
             console.log(err);
@@ -310,8 +311,6 @@ router.post(
         })
         .catch((err) => console.log(err.message));
     }
-
-    // res.status(200).end();
   }
 );
 
